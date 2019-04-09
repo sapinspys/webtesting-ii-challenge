@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { strike, foul, ball, hit } from '../actions';
+import { strike, foul, ball, hit } from '../../actions';
 import { connect } from 'react-redux';
 
 import styled from 'styled-components';
@@ -19,7 +19,6 @@ class Dashboard extends Component {
         <button onClick={this.props.ball}>BALL</button>
         <button onClick={this.props.foul}>FOUL</button>
         <button onClick={this.props.hit}>HIT</button>
-        <p>{this.props.actionReq ? "Loading..." : ""}</p>
       </DashboardContainer>
     );
   }
@@ -27,7 +26,6 @@ class Dashboard extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    actionReq: state.actionReq
   }
 }
 

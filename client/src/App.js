@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import Display from './components/Display.js'
-import Dashboard from './components/Dashboard.js'
+import Display from './components/Display'
+import Dashboard from './components/Dashboard'
 
 
 class App extends Component {
