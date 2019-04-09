@@ -19,6 +19,7 @@ class Dashboard extends Component {
         <button onClick={this.props.ball}>BALL</button>
         <button onClick={this.props.foul}>FOUL</button>
         <button onClick={this.props.hit}>HIT</button>
+        <p>{this.props.actionReq ? "Loading..." : ""}</p>
       </DashboardContainer>
     );
   }

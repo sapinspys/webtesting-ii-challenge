@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { connect } from 'react-redux';
+
 import styled from 'styled-components';
 
 const DisplayContainer = styled.div`
@@ -14,15 +16,22 @@ class Display extends Component {
       <DisplayContainer>
         <div>
           <h3>BALL</h3>
-          <p>0</p>
+          <p>{this.props.ball}</p>
         </div>
         <div>
           <h3>STRIKE</h3>
-          <p>0</p>
+          <p>{this.props.strike}</p>
         </div>
       </DisplayContainer>
     );
   }
 }
 
-export default Display;
+const mapStateToProps = (state) => {
+  return {
+    ball: state.ball,
+    strike: state.strike
+  }
+}
+
+export default connect(mapStateToProps, {})(Display);
