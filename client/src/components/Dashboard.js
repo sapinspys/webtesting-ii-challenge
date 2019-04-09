@@ -12,10 +12,10 @@ class Dashboard extends Component {
   render() {
     return (
       <DashboardContainer>  
-        {/* <button onClick={}>STRIKE</button>
+        <button onClick={}>STRIKE</button>
         <button onClick={}>BALL</button>
         <button onClick={}>FOUL</button>
-        <button onClick={}>HIT</button> */}
+        <button onClick={}>HIT</button>
       </DashboardContainer>
     );
   }
