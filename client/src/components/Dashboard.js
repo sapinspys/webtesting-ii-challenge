@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+import { strike, foul, ball, hit } from '../actions';
+import { connect } from 'react-redux';
+
 import styled from 'styled-components';
 
 const DashboardContainer = styled.div`
@@ -12,13 +15,20 @@ class Dashboard extends Component {
   render() {
     return (
       <DashboardContainer>  
-        <button onClick={}>STRIKE</button>
-        <button onClick={}>BALL</button>
-        <button onClick={}>FOUL</button>
-        <button onClick={}>HIT</button>
+        <button onClick={this.props.strike}>STRIKE</button>
+        <button onClick={this.props.ball}>BALL</button>
+        <button onClick={this.props.foul}>FOUL</button>
+        <button onClick={this.props.hit}>HIT</button>
       </DashboardContainer>
     );
   }
 }
 
-export default Dashboard;
+const mapStateToProps = (state) => {
+  return {
+    actionReq: state.actionReq
+  }
+}
+
+export default connect(mapStateToProps, { strike, foul, ball, hit })(Dashboard);
+
